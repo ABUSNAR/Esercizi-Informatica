@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.Random;
+public class calcolatrice {
+    public static void main(String[] args) throws InterruptedException {
+        Random GG = new Random();
+        Scanner ali = new Scanner(System.in);
+        int stamp, num;
+        int max;
+        System.out.println("quanti numeri desidera stampare ?");
+        stamp = ali.nextInt();
+        int[] intArray = new int[stamp];
+        System.out.println("qual'è il range massimo di numeri ? ");
+        max = ali.nextInt();
+        for (int i = 0; i < stamp; i++) {
+            num = GG.nextInt(max);
+            intArray[i] = num;
+        }
+        System.out.println("I numeri pari sono:");
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] % 2 == 0) {
+                System.out.println(intArray[i]);
+                Thread.sleep (999);
+            }
+        }
+        System.out.println("I numeri dispari sono:");
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] % 2 != 0) {
+                System.out.println(intArray[i]);
+                Thread.sleep (999);
+            }
+        }
+    }
+}
